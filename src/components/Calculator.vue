@@ -22,6 +22,10 @@
 <script>
 export default{
 	methods: {
+		//Eventhandler and methods combined into one. 
+		//This basically handles all the functions in the calculator
+		//But I could have made it differently, by just using the defined operators
+		//and going from there, 
 		buttonClick(button) {
 			if (button.type == 'number'){
 				if (this.previousValue === null){
@@ -46,10 +50,13 @@ export default{
 			}
 		}
 	},
+
+
 	data:() => ({
 		display: '',
 		previousValue: '', 
 		currentOperator: '',
+
 
 		operations: {
 			'÷': (a, b) => a / b,
@@ -58,6 +65,11 @@ export default{
 			'+': (a, b) => a + b,
 			'%': (a, b) => a + b /100,
 		},
+
+		//I am pretty sure this is an outdated way of doing this
+		//But here I have made the buttons in JavaScript, 
+		//Could actually just have made it in html and made the
+		//operations in JavaScript.
 
 		buttonRows: [
 			[{ 

@@ -24,6 +24,12 @@
 			}
 		}, 
 
+	//Here I have added the formula to convert cups to each unit
+	// which I think is right, in computed, I have the 
+	//output-values, and return works in a way where the cup-values
+	//entered, will be returned based on the formula to convert
+	//in the case of ounces it is cup * 8. 
+	//I think this is right
 	computed: {
 		ouncesValue() {
 			return (this.cupValue * 8);
